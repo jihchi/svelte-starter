@@ -1,15 +1,16 @@
+import path from 'path';
 
 export default {
   entry: {
-    'index': [ './src/index.js' ]
+    index: ['./src/index.js'],
   },
   resolve: {
-    extensions: [ '.js', '.html' ]
+    extensions: ['.js', '.html'],
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    chunkFilename: '[name].[id].js'
+    chunkFilename: '[name].[id].js',
   },
   module: {
     rules: [
@@ -21,10 +22,9 @@ export default {
       {
         test: /\.html$/,
         exclude: /node_modules/,
-        use: 'svelte-loader'
-      }
-    ]
+        use: 'svelte-loader',
+      },
+    ],
   },
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-source-map',
 };
-
