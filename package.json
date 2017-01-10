@@ -3,18 +3,35 @@
   "version": "1.0.0",
   "description": "Svelte starter",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "rm -rf dist && mkdir dist && cp public/index.html dist/",
+    "start": "webpack-dev-server --content-base dist --inline --compress"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jihchi/svelte-starter.git"
   },
-  "keywords": ["svelte", "starter"],
+  "keywords": [
+    "svelte",
+    "starter"
+  ],
   "author": "Jih-Chi Lee <achi@987.tw>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jihchi/svelte-starter/issues"
   },
-  "homepage": "https://github.com/jihchi/svelte-starter#readme"
+  "homepage": "https://github.com/jihchi/svelte-starter#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.7",
+    "svelte-loader": "^1.1.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "svelte": "^1.6.3"
+  }
 }
