@@ -29,23 +29,28 @@ export default {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader?importLoaders=1',
-          'postcss-loader',
-        ],
-        options: {
-          plugins: function plugins() {
-            return [
-              autoprefixer({
-                browsers: [
-                  '>1%',
-                  'last 4 versions',
-                  'Firefox ESR',
-                  'not ie < 9',
-                ],
-              }),
-            ];
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
           },
-        },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function plugins() {
+                return [
+                  autoprefixer({
+                    browsers: [
+                      '>1%',
+                      'last 4 versions',
+                      'Firefox ESR',
+                      'not ie < 9',
+                    ],
+                  }),
+                ];
+              },
+            },
+          },
+        ],
       },
     ],
   },
