@@ -27,15 +27,15 @@
     "autoprefixer": "^6.6.1",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.1.7",
+    "babel-preset-env": "^1.1.8",
     "css-loader": "^0.26.1",
-    "postcss-loader": "^1.2.1",
+    "postcss-loader": "^1.2.2",
     "style-loader": "^0.13.1",
-    "svelte-loader": "^1.1.0",
+    "svelte-loader": "^1.2.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "svelte": "^1.6.3"
+    "svelte": "^1.6.5"
   }
 }
