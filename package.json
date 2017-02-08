@@ -33,7 +33,7 @@
     "style-loader": "^0.13.1",
     "svelte-loader": "^1.2.1",
     "webpack": "beta",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
     "svelte": "^1.6.5"
