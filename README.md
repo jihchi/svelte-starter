@@ -1,5 +1,7 @@
 # svelte-starter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jihchi/svelte-starter.svg)](https://greenkeeper.io/)
+
 ## Getting Started
 
 ```
